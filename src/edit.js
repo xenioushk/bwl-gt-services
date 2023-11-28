@@ -37,7 +37,8 @@ export default function Edit({ attributes, setAttributes }) {
 				</PanelBody>
 			</InspectorControls>
 
-			<InnerBlocks allowedBlocks={["bwl-gt-blocks/bwl-gt-service"]} />
+			{/* <InnerBlocks allowedBlocks={["bwl-gt-blocks/bwl-gt-service"]} /> */}
+			<InnerBlocks allowedBlocks={["core/image"]} />
 		</div>
 	);
 }

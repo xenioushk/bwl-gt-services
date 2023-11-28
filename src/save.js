@@ -6,7 +6,7 @@ export default function Save({ attributes }) {
 
 	return (
 		<p {...useBlockProps.save()}>
-			{"Bwl Gt Service – hello from the saved content!"}
+			<InnerBlocks.Content />
 		</p>
 	);
 }

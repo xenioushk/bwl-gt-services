@@ -3,11 +3,17 @@ import { useBlockProps, RichText } from "@wordpress/block-editor";
 import { __ } from "@wordpress/i18n";
 
 export default function Edit({ attributes, setAttributes }) {
-	const { title } = attributes;
+	const { serviceTitle, serviceDescription } = attributes;
 
-	const onChangeTitle = (newTitle) => {
+	const onChangeServiceTitle = (newServiceTitle) => {
 		setAttributes({
-			title: newTitle,
+			serviceTitle: newServiceTitle,
+		});
+	};
+
+	const onChangeServiceDescription = (newsServiceDescription) => {
+		setAttributes({
+			serviceDescription: newsServiceDescription,
 		});
 	};
 
@@ -16,9 +22,16 @@ export default function Edit({ attributes, setAttributes }) {
 			<div {...useBlockProps()}>
 				<RichText
 					tagName="h4"
-					placeholder="Service title"
-					value={title}
-					onChange={onChangeTitle}
+					placeholder="Service Title"
+					value={serviceTitle}
+					onChange={onChangeServiceTitle}
+					allowedFormats={[]}
+				/>
+				<RichText
+					tagName="p"
+					placeholder="Service Description"
+					value={serviceDescription}
+					onChange={onChangeServiceDescription}
 					allowedFormats={[]}
 				/>
 			</div>

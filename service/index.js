@@ -15,10 +15,15 @@ registerBlockType("bwl-gt-blocks/bwl-gt-service", {
 		reusable: false,
 	},
 	attributes: {
-		title: {
+		serviceTitle: {
 			type: "string",
 			source: "html",
 			selector: "h4",
+		},
+		serviceDescription: {
+			type: "string",
+			source: "html",
+			selector: "p",
 		},
 	},
 	edit: Edit,
