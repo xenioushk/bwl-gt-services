@@ -1,6 +1,6 @@
 // Service Inner Block index.js
 import { registerBlockType } from "@wordpress/blocks";
-import metadata from "../src/block.json";
+import metadata from "../block.json";
 import { __ } from "@wordpress/i18n";
 import Edit from "./edit";
 import Save from "./save";

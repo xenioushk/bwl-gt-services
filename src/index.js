@@ -1,7 +1,7 @@
 // Services Parent Block index.js
 import { registerBlockType } from "@wordpress/blocks";
 import { __ } from "@wordpress/i18n";
-import "../service";
+import "./service";
 
 import "./style.scss";
 
