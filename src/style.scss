@@ -5,8 +5,56 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-.wp-block-create-block-bwl-gt-service {
-	background-color: #21759b;
-	color: #fff;
-	padding: 2px;
+@import "./config.scss";
+
+.wp-block-bwl-gt-blocks-bwl-gt-services {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -10px;
+	margin-right: -10px;
+
+	$columns: 6;
+
+	@for $i from 1 through $columns {
+		&.has-#{$i}-columns {
+			.wp-block-bwl-gt-blocks-bwl-gt-service {
+				width: calc((100% / #{$i}) - 20px);
+			}
+		}
+	}
+
+	.wp-block-bwl-gt-blocks-bwl-gt-service {
+		margin: 10px;
+		background-color: lighten($team-bg, 10%);
+		border-radius: 4px;
+		img {
+			max-width: 100%;
+		}
+		h4 {
+			font-size: 2rem;
+			line-height: 2rem;
+			margin: 0;
+		}
+
+		.wp-block-bwl-gt-blocks-bwl-gt-service-social-links {
+			ul {
+				list-style: none;
+				padding: 0;
+				margin: 20px -5px 0;
+
+				li {
+					display: inline;
+					margin: 5px;
+
+					span.dashicon {
+						color: #444444;
+					}
+
+					a {
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
 }

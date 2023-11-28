@@ -24,7 +24,11 @@ export default function Edit({ attributes, setAttributes }) {
 	};
 
 	return (
-		<div {...useBlockProps()}>
+		<div
+			{...useBlockProps({
+				className: `has-${columns}-columns`,
+			})}
+		>
 			<InspectorControls>
 				<PanelBody>
 					<RangeControl

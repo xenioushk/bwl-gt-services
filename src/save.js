@@ -5,8 +5,8 @@ export default function Save({ attributes }) {
 	const { columns } = attributes;
 
 	return (
-		<p {...useBlockProps.save()}>
+		<div {...useBlockProps.save()}>
 			<InnerBlocks.Content />
-		</p>
+		</div>
 	);
 }
